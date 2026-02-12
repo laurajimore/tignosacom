@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-amber-brand: #e2a932;
+  --color-amber-brand-dark: #c99025;
+  --color-amber-brand-light: #fdf4e1;
+  --color-stone-warm: #faf8f5;
+  --font-display: "Montserrat", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+/* Pulse dot for live event */
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+.pulse-dot::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: #e2a932;
+  animation: pulse-ring 1.5s ease-out infinite;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
